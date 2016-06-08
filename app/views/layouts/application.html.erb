@@ -7,9 +7,39 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
-
+    <% if current_user %>
+      <div class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Message Board
+            </a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="/">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+              </a>
+            </li>
+          </ul>
+          <p class="navbar-text pull-right">
+            <%= current_user.email %> | <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          </p>
+        </div>
+      </div>
+    <% else %>
+    <% end %>
+    <div class="container">
+      <% if notice %>
+        <p class="alert alert-info"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-warning"><%= alert %></p>
+      <% end %>
+      <%= yield %>
+    </div>
+    <div class="footer">
+      <a href="http://julemagne.github.io/portfolio/">Julie David</a> <%= Date.today.year %> ◕ ‿ ◕
+    </div>
   </body>
 </html>

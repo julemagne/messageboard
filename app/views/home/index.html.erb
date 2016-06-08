@@ -1,7 +1,22 @@
-<p>Hello and welcome to Julie's Messageboard!</p>
+<h1>Hello!
+  <small class="limegreen">and welcome to Julie's Messageboard!</small>
+</h1>
+<div class="spacer"></div>
 <% if current_user %>
-  <p>Nice to see you, <%= current_user.email %> :) <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
+<div class="jumbotron">
+  <p>Looking good,
+    <%= current_user.email %>
+  </p>
+</div>
 <% else %>
-  <p>For existing users, <%= link_to "Sign In", new_user_session_path %></p>
-  <p>For new users, <%= link_to "Sign Up", new_user_registration_path %></p>
+<h3>For existing users,
+  <button type="button" class="btn btn-success btn-words">
+    <%= link_to "Sign In", new_user_session_path %>
+  </button>
+</h3>
+<h3>For new users,
+  <button type="button" class="btn btn-success btn-words">
+    <%= link_to "Sign Up", new_user_registration_path %>
+  </button>
+</h3>
 <% end %>
