@@ -1,0 +1,7 @@
+<% if current_user %>
+  <h1>Write a New Post...</h1>
+  <%= render 'form' %>
+<% else %>
+  <div class="spacer"></div>
+  <p>You must <%= link_to "sign in", new_user_session_path %> to post.</p>
+<% end %>

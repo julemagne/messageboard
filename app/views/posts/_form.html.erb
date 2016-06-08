@@ -1,0 +1,24 @@
+<div class="formline">
+
+  <%= form_for @post, html: { multipart: true } do |f| %>
+  <div class="formline">
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control", required: true, autofocus: true,
+      placeholder: "Title", value: @post.title || "" %>
+    </div>
+  </div>
+
+  <div class="formline">
+    <div class="form-group">
+      <%= f.label :content %>
+      <%= f.text_area :content, class: "form-control", rows: 10, required: true, autofocus: true,
+      placeholder: "Content", value: @post.content || "" %>
+    </div>
+  </div>
+  <p>
+    <%= f.submit 'Submit', class: "btn btn-lg btn-success" %>
+  </p>
+
+  <% end %>
+</div>

@@ -13,6 +13,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+h1 {
+  color: #5D5D5D;
+}
+
 h2 {
   color: #5D5D5D;
 }
@@ -54,6 +58,27 @@ p {
 // change color
 .limegreen {
   color: limegreen;
+}
+
+.greenback {
+  border-radius: .7em;
+  background-color: #ecf9ec;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  padding-top: .5em;
+}
+
+.whiteback {
+  background-color: white;
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: .5em;
+  padding-top: .5em;
 }
 
 // flashes

@@ -4,9 +4,12 @@
 <div class="spacer"></div>
 <% if current_user %>
 <div class="jumbotron">
-  <p>Looking good,
-    <%= current_user.email %>
+  <p>Welcome to the internet,
+    <span class="limegreen"><%= current_user.email %></span>
   </p>
+  <button class="btn btn-lg btn-success btn-words">
+    <%= link_to "Write a new post!", new_post_path %>
+  </button>
 </div>
 <% else %>
 <h3>For existing users,

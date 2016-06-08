@@ -1,0 +1,7 @@
+<div class="greenback">
+  <h1><%= @post.title %> </h1>
+  <p class="whiteback">
+    by <span class="limegreen"><%= @post.user.email %></span> on <%= @post.created_at.strftime("%A, %B %e, %Y") %>
+  </p>
+  <p><%= @post.content %></p>
+</div>
