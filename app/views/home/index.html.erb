@@ -1,1 +1,7 @@
-Hello B)
+<p>Hello and welcome to Julie's Messageboard!</p>
+<% if current_user %>
+  <p>Nice to see you, <%= current_user.email %> :) <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
+<% else %>
+  <p>For existing users, <%= link_to "Sign In", new_user_session_path %></p>
+  <p>For new users, <%= link_to "Sign Up", new_user_registration_path %></p>
+<% end %>
