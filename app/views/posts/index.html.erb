@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to post.title, post %></td>
         <td><%= post.user.email %></td>
-        <td><%= post.created_at.strftime("%A, %B %e, %Y %l:%M %P") %></td>
+        <td><%= post.created_at.strftime("%A, %B %e, %Y %l:%M %P %Z") %></td>
       </tr>
       <% end %>
     </tbody>
