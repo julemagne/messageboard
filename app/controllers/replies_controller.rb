@@ -7,8 +7,6 @@ class RepliesController < ApplicationController
 
   def create
     @reply = Reply.new(reply_params)
-    @reply.user_id = current_user.id
-    @reply.post_id = params[:post_id]
     @post = Post.find(params[:post_id])
     if @reply.save
       redirect_to [@post, @reply], notice: 'Reply has been saved.'

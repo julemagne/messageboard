@@ -13,7 +13,7 @@
     <p><%= @post.content %></p>
   </div>
 </div>
-<p><%= pluralize(@post.replies.length, "reply") %> to "<%= @post.title %>":
+<p><%= pluralize(@post.replies.length, "reply") %> to "<%= @post.title %>"
   <% if @post.replies.length > 0 %>
     <% @post.replies.each do |reply| %>
       <div class="panel panel-success">

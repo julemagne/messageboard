@@ -1,7 +1,10 @@
 <div class="formline">
 
   <%= form_for [@post, @reply], html: { multipart: true } do |f| %>
-
+  <div class="field">
+    <%= f.hidden_field :post_id, value: params[:post_id] || nil  %>
+    <%= f.hidden_field :user_id, value: current_user.id  %>
+  </div>
   <div class="formline">
     <div class="form-group">
       <%= f.label :your_reply %>
