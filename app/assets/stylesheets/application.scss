@@ -35,6 +35,11 @@ p {
   font-size: 1.3em;
 }
 
+.line-break {
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
 // header
 .spacer {
    border-top: .1em solid lightgray;

@@ -3,5 +3,5 @@
   <p class="whiteback">
     by <span class="limegreen"><%= @reply.user.email %></span> on <%= @reply.created_at.strftime("%A, %B %e, %Y") %>
   </p>
-  <p><%= @reply.content %></p>
+  <p class="line-break"><%= @reply.content %></p>
 </div>
