@@ -1,0 +1,17 @@
+<div class="formline">
+
+  <%= form_for [@post, @reply], html: { multipart: true } do |f| %>
+
+  <div class="formline">
+    <div class="form-group">
+      <%= f.label :your_reply %>
+      <%= f.text_area :content, class: "form-control", rows: 10, required: true, autofocus: true,
+      placeholder: "...", value: @reply.content || "" %>
+    </div>
+  </div>
+  <p>
+    <%= f.submit 'Submit', class: "btn btn-lg btn-success" %>
+  </p>
+
+  <% end %>
+</div>

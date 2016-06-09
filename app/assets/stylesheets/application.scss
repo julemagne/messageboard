@@ -61,24 +61,13 @@ p {
 }
 
 .greenback {
-  border-radius: .7em;
+  border: 1px solid #bfe699;
+  border-radius: .2em;
   background-color: #ecf9ec;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 2em;
-  padding-top: .5em;
-}
-
-.whiteback {
-  background-color: white;
-  margin-left: -2em;
-  margin-right: -2em;
-  margin-top: 1.5em;
-  margin-bottom: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: .5em;
-  padding-top: .5em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 7em;
+  padding-top: 3em;
 }
 
 // flashes

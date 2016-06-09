@@ -1,7 +1,29 @@
-<div class="greenback">
-  <h1><%= @post.title %> </h1>
-  <p class="whiteback">
-    by <span class="limegreen"><%= @post.user.email %></span> on <%= @post.created_at.strftime("%A, %B %e, %Y") %>
-  </p>
-  <p><%= @post.content %></p>
+<button class="btn btn-md btn-success btn-words">
+  <%= link_to "Reply to #{@post.user.email}!", new_post_reply_path(post_id: @post.id) %>
+</button>
+<p></p>
+<div class="jumbotron">
+  <div class="greenback">
+    <h1><%= @post.title %></h1>
+    <p></p>
+    <h4>
+      by <span class="limegreen"><%= @post.user.email %></span> on <%= @post.created_at.strftime("%A, %B %e, %Y") %>
+    </h4>
+    <div class="spacer"></div>
+    <p><%= @post.content %></p>
+  </div>
 </div>
+<p><%= pluralize(@post.replies.length, "reply") %> to "<%= @post.title %>":
+  <% if @post.replies.length > 0 %>
+    <% @post.replies.each do |reply| %>
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= reply.user.email %> posted:</h3>
+        </div>
+        <div class="panel-body">
+          <p><%= reply.content %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</p>

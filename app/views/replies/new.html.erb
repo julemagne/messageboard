@@ -1,0 +1,10 @@
+<% if current_user %>
+  <h1>Reply to "<%= @post.title %>"</h1>
+  <div class="well">
+    <p><%= @post.content %></p>
+  </div>
+  <%= render 'form' %>
+<% else %>
+  <div class="spacer"></div>
+  <p>You must <%= link_to "sign in", new_user_session_path %> to comment.</p>
+<% end %>
