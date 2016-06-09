@@ -20,6 +20,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @reply = Reply.new
   end
 
   private
