@@ -9,9 +9,9 @@
     <p><%= @post.content %></p>
   </div>
 </div>
-
-<%= render 'reply_form' %>
-
+<% if current_user %>
+  <%= render 'reply_form' %>
+<% end %>
 <p><%= pluralize(@post.replies.length, "reply") %> to "<%= @post.title %>"
   <% if @post.replies.length > 0 %>
     <% @post.replies.each do |reply| %>
